@@ -358,6 +358,7 @@ li {
 .navbar .navbar-collapse {
   position: relative;
   top: 0px;
+  height: 0px;
   background: white;
 }
 
