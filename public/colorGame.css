@@ -1,0 +1,70 @@
+body {
+	background: #232323;
+}
+.background {
+	background: purple;
+}
+.square {
+	width: 30%;
+	background-color: purple;
+	padding-bottom: 30%;
+	float: left;
+	margin: 1.66%;
+	border: 1px solid #232323;
+	border-radius: 10px;
+	transition: background 0.6s;
+	-webkit-transition: background 0.6s;
+	-moz-transition: background 0.6s;
+}
+#container {
+	width: 600px;
+	margin: auto;
+}
+h1 {
+	color: white;
+	text-align: center;
+	font-size: 2.8em;
+}
+#rgb {
+	font-size: 1.5em;
+}
+#squareSPace {
+	height: auto;
+}
+#display {
+	text-align: center;
+	color: white;
+	background-color: grey;
+	font-size: 1.6em;
+	
+	
+}
+#easy {
+	padding-left: 10px;
+	padding-right: 10px;
+	
+}
+
+#hard {
+	padding-right: 10px;
+	padding-left: 10px;
+	
+}
+#playgame {
+	padding-left: 20px;
+}
+button {
+	background: none;
+	border: none;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: purple;
+	letter-spacing: 1px;
+	transition: all 0.3s
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+}
+button:hover {
+	color: white;
+	background: purple;
+}

@@ -55,14 +55,14 @@ class ThumbNails extends Component {
             my favorite movies Blade Runner.
           </p>
           <a
-            href="https://mathewdocker.com.au/"
+            href="https://portfolio-website-dff0b.firebaseapp.com/"
             className="invest-btn"
             target="_blank"
           >
             Investigate
           </a>
           <a
-            href="https://mathewdocker.com.au/"
+            href="https://github.com/matdocker/portfolio"
             className="invest-btn"
             target="_blank"
           >
@@ -87,11 +87,7 @@ class ThumbNails extends Component {
             with the rgb colour data that is displayed at the top of the screen.
             When you match the correct colour, you win!
           </p>
-          <a
-            href="https://mathewdocker.com.au/colourgame.html"
-            className="invest-btn"
-            target="_blank"
-          >
+          <a href="/colourGame.html" className="invest-btn" target="_blank">
             Investigate
           </a>
           <a
@@ -143,8 +139,9 @@ class ThumbNails extends Component {
 
           <p>ScaffMate. A Scaffolding Reference App</p>
           <p>
-            ScaffMate Android App has been developed using Android Studio (Java). ScaffMate is a scaffold reference 
-            app containing the rules and regulations of scaffolding. The purpose of this app was to learn 
+            ScaffMate Android App has been developed using Android Studio
+            (Java). ScaffMate is a scaffold reference app containing the rules
+            and regulations of scaffolding. The purpose of this app was to learn
             the development process from Idea to an app in the app store.
           </p>
           <a

@@ -14,8 +14,8 @@ class SocialIcons extends Component {
   render() {
     return (
       <div className="">
-        <a href={`mailto:${this.props.email}`} target="_blank">
-          <i class="far fa-envelope icon" />
+        <a href={this.props.linkdin} target="_blank">
+          <i class="fab fa-linkedin icon" />
         </a>
         <a href={this.props.instagram} target="_blank">
           <i className="fab fa-instagram icon" />

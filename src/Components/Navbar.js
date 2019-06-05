@@ -30,6 +30,8 @@ class Navbar extends Component {
   }
   toggleNav = () => {
     navBar = document.querySelector(".navbar-collapse");
+    navToggle = document.querySelector("#toggle");
+    navToggle.classList.toggle("red");
     navBar.classList.toggle("navbar-show");
   };
 
@@ -59,12 +61,8 @@ class Navbar extends Component {
             <h1 className="brand" style={{ float: this.props.brandFloat }}>
               B 2019
             </h1>
-            <button
-              id="toggle"
-              className="toggle-btn"
-              onClick={() => this.toggleNav()}
-            >
-              <i className="fas fa-bars" />
+            <button className="toggle-btn" onClick={() => this.toggleNav()}>
+              <i id="toggle" className="fas fa-bars" />
             </button>
             <div className="navbar-collapse">{this.renderNavItems()}</div>
           </nav>
@@ -75,7 +73,7 @@ class Navbar extends Component {
             <h1>Mathew Docker</h1>
             <div className="about-stroke" />
             <SocialIcons
-              email={"mathew.docker@gmail.com"}
+              linkdin={"https://www.linkedin.com/in/mathew-docker/"}
               instagram={"https://www.instagram.com/rainy_day_developer/"}
               twitter={"https://twitter.com/MathewDocker"}
               github={"https://github.com/matdocker"}
