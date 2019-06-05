@@ -1,24 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import "./Style/style.css";
+import Navbar from "./Components/Navbar";
+import "./Style/fontawesome/fontawesome-free-5.8.2-web/js/all";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar
+        id={"navbarOne"}
+        items={["Contact", "My Portfolio", "Technologies", "About Me", "Home"]}
+        menu={["contact", "portfolio", "technologies", "about", "home"]}
+        itemFloat={"right"}
+        brand={require("./Images/logo.png")}
+        brandFloat={"left"}
+      />
     </div>
   );
 }
