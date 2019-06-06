@@ -28,7 +28,7 @@ h5,
 h6 {
   font-family: "BladeRunner", Fallback, sans-serif !important;
   text-shadow: #000000 0px 2px 0px;
-  @media only screen and (max-width: 660px) {
+  @media only screen and (max-width: 900px) {
     font-size: 2rem !important;
   }
 }
@@ -37,7 +37,7 @@ p,
 a {
   font-family: "BladeRunner-para", Fallback, sans-serif !important;
   font-size: 1.5rem;
-  @media only screen and (max-width: 660px) {
+  @media only screen and (max-width: 900px) {
     font-size: 1rem !important;
   }
 }
@@ -69,7 +69,7 @@ body {
   );
 }
 .col {
-  @media only screen and (max-width: 660px) {
+  @media only screen and (max-width: 900px) {
     padding: 4% !important;
     flex-wrap: wrap;
   }
@@ -78,14 +78,14 @@ body {
 //Collums
 .col-4 {
   width: 33.333%;
-  @media only screen and (max-width: 660px) {
+  @media only screen and (max-width: 900px) {
     width: 100% !important;
     flex-wrap: wrap;
   }
 }
 .col-8 {
   width: 54.666%;
-  @media only screen and (max-width: 660px) {
+  @media only screen and (max-width: 900px) {
     width: 100% !important;
     flex-wrap: wrap;
   }
@@ -172,6 +172,7 @@ body {
   }
 
   100% {
+    display: none;
     height: 0px;
     background: rgba(255, 255, 255, 0);
   }
@@ -184,6 +185,7 @@ body {
   }
 
   100% {
+    display: none;
     height: 0px;
     background: rgba(255, 255, 255, 0);
   }
@@ -225,7 +227,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  @media only screen and (max-width: 660px) {
+  @media only screen and (max-width: 900px) {
     justify-content: left !important;
   }
 }
@@ -235,7 +237,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: none;
-  @media only screen and (max-width: 660px) {
+  @media only screen and (max-width: 900px) {
     justify-content: left !important;
   }
 }
@@ -244,19 +246,19 @@ body {
   flex-direction: row;
   justify-content: center;
   align-content: center;
-  @media only screen and (max-width: 660px) {
+  @media only screen and (max-width: 900px) {
     justify-content: left !important;
   }
 }
 //Flex-row
 .flex {
   @include row;
-  @media only screen and (max-width: 660px) {
+  @media only screen and (max-width: 900px) {
     width: 100% !important;
   }
 }
 .wrap {
-  @media only screen and (max-width: 660px) {
+  @media only screen and (max-width: 900px) {
     flex-wrap: wrap;
   }
 }
@@ -274,7 +276,7 @@ li {
   text-shadow: #000000 0px 2px 0px;
   margin-top: 20px;
   font-size: 2rem;
-  @media only screen and (max-width: 660px) {
+  @media only screen and (max-width: 900px) {
     font-size: 1.5rem !important;
   }
 }
@@ -296,7 +298,8 @@ li {
 .navbar {
   background: transparent;
   width: 100%;
-  position: relative;
+  position: fixed;
+
   z-index: 3;
   .toggle-btn {
     float: right;
@@ -322,22 +325,20 @@ li {
   .brand {
     color: $font;
     font-size: 40px;
-    height: 60px;
+    height: auto;
     width: auto;
     margin: 15px;
   }
   // Navbar collapse for mobile and tablet devices
   .navbar-collapse {
     position: relative;
-    top: 0px;
-    height: 0px;
     background: rgba(255, 255, 255, 1);
     .nav-item {
       position: relative;
       top: 0px;
       margin-right: 50px;
 
-      @media only screen and (max-width: 660px) {
+      @media only screen and (max-width: 900px) {
         color: $primary;
         margin-right: 0px !important;
         -webkit-animation: opacity 1s ease;
@@ -345,11 +346,9 @@ li {
         animation: opacity 1s ease;
       }
     }
-    @media only screen and (max-width: 660px) {
-      // height: 0px;
-      // position: relative;
-      // // top: 0px;
+    @media only screen and (max-width: 900px) {
       opacity: 0;
+
       // z-index: 1;
       padding: 10px 0px;
       width: 100%;
@@ -357,20 +356,23 @@ li {
       flex-direction: column-reverse;
       align-items: center;
       transition: all 0.5s ease;
-      -webkit-animation: navbar-in 0.5s ease-in;
-      -moz-animation: navbar-in 0.5s ease-in;
-      animation: navbar-in 0.5s ease-in;
     }
   }
   .navbar-show {
-    @media only screen and (max-width: 660px) {
-      height: 300px;
+    @media only screen and (max-width: 900px) {
+      // height: 300px !important;
       opacity: 1;
-
       -webkit-animation: navbar-out 0.5s ease-in;
       -moz-animation: navbar-out 0.5s ease-in;
       animation: navbar-out 0.5s ease-out;
     }
+  }
+  .hide {
+    // display: none !important;
+    height: 0px;
+    -webkit-animation: navbar-in 0.5s ease-in;
+    -moz-animation: navbar-in 0.5s ease-in;
+    animation: navbar-in 0.5s ease-in;
   }
 }
 .navbar-no-brand {
@@ -380,7 +382,7 @@ li {
   }
 }
 .navbar-brand {
-  height: 70px;
+  height: auto;
   .nav-item {
     margin-top: 30px !important;
   }
@@ -392,10 +394,14 @@ li {
 .about {
   @include flex-center;
   width: 100%;
-  height: 89vh;
+  height: 87vh;
+  padding-top: 50px;
+  @media only screen and (max-width: 900px) {
+    height: auto !important;
+  }
 
   .col {
-    @media only screen and (max-width: 660px) {
+    @media only screen and (max-width: 900px) {
       width: 100% !important;
     }
     #portfolio-para {
@@ -428,7 +434,7 @@ li {
           font-size: 50px;
           color: $primary;
           padding: 4px;
-          @media only screen and (max-width: 660px) {
+          @media only screen and (max-width: 900px) {
             width: 30px !important;
             height: 30px !important;
           }
@@ -465,13 +471,13 @@ li {
       color: $secondary;
       transition: all 0.3s ease;
       padding: 0px;
-      @media only screen and (max-width: 660px) {
+      @media only screen and (max-width: 900px) {
         font-size: 1rem !important;
       }
     }
     .thumbnail {
       width: 70% !important;
-      @media only screen and (max-width: 660px) {
+      @media only screen and (max-width: 900px) {
         width: 70% !important;
       }
     }
@@ -509,7 +515,7 @@ li {
   }
   p {
     font-size: 2rem;
-    @media only screen and (max-width: 660px) {
+    @media only screen and (max-width: 900px) {
       font-size: 1.5rem;
     }
   }
@@ -517,5 +523,15 @@ li {
     p:hover {
       color: $primary !important;
     }
+  }
+}
+///////////////////////////////////////////
+// Footer Section
+///////////////////////////////////////////
+#footer {
+  background: black;
+  padding: 1px 0px;
+  p {
+    color: $secondary;
   }
 }

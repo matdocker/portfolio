@@ -11,8 +11,8 @@ class Technologies extends Component {
           <div className="col-4">
             <p>
               <ul>
-                <li>HTML5 & CSS3</li>3 Years
-                <li>JavaScript > ES6</li>3 Years
+                <li>HTML5 & CSS3</li>2.5 Years
+                <li>JavaScript > ES6</li>2 Years
                 <li>Bootstrap</li>2 Years
                 <li>Photoshop</li>6 Years
                 <li>SASS</li>1 Year

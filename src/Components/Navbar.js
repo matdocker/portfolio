@@ -33,6 +33,7 @@ class Navbar extends Component {
     navToggle = document.querySelector("#toggle");
     navToggle.classList.toggle("red");
     navBar.classList.toggle("navbar-show");
+    navBar.classList.toggle("hide");
   };
 
   renderNavItems() {
@@ -64,7 +65,7 @@ class Navbar extends Component {
             <button className="toggle-btn" onClick={() => this.toggleNav()}>
               <i id="toggle" className="fas fa-bars" />
             </button>
-            <div className="navbar-collapse">{this.renderNavItems()}</div>
+            <div className="navbar-collapse hide">{this.renderNavItems()}</div>
           </nav>
         </header>
         <section className="about">

@@ -18,7 +18,7 @@ h6 {
   text-shadow: #000000 0px 2px 0px;
 }
 
-@media only screen and (max-width: 660px) {
+@media only screen and (max-width: 900px) {
   h1,
   h2,
   h3,
@@ -35,7 +35,7 @@ a {
   font-size: 1.5rem;
 }
 
-@media only screen and (max-width: 660px) {
+@media only screen and (max-width: 900px) {
   p,
   a {
     font-size: 1rem !important;
@@ -56,7 +56,7 @@ body {
   background: linear-gradient(90deg, black 41%, #4e3b70 72%, #6d2a50 86%, #931528 100%, #b90000 100%);
 }
 
-@media only screen and (max-width: 660px) {
+@media only screen and (max-width: 900px) {
   .col {
     padding: 4% !important;
     -ms-flex-wrap: wrap;
@@ -68,7 +68,7 @@ body {
   width: 33.333%;
 }
 
-@media only screen and (max-width: 660px) {
+@media only screen and (max-width: 900px) {
   .col-4 {
     width: 100% !important;
     -ms-flex-wrap: wrap;
@@ -80,7 +80,7 @@ body {
   width: 54.666%;
 }
 
-@media only screen and (max-width: 660px) {
+@media only screen and (max-width: 900px) {
   .col-8 {
     width: 100% !important;
     -ms-flex-wrap: wrap;
@@ -179,6 +179,7 @@ body {
     background: white;
   }
   100% {
+    display: none;
     height: 0px;
     background: rgba(255, 255, 255, 0);
   }
@@ -234,7 +235,7 @@ body {
       align-content: center;
 }
 
-@media only screen and (max-width: 660px) {
+@media only screen and (max-width: 900px) {
   .flex {
     -webkit-box-pack: left !important;
         -ms-flex-pack: left !important;
@@ -242,13 +243,13 @@ body {
   }
 }
 
-@media only screen and (max-width: 660px) {
+@media only screen and (max-width: 900px) {
   .flex {
     width: 100% !important;
   }
 }
 
-@media only screen and (max-width: 660px) {
+@media only screen and (max-width: 900px) {
   .wrap {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -278,7 +279,7 @@ body {
       flex-wrap: wrap !important;
 }
 
-@media only screen and (max-width: 660px) {
+@media only screen and (max-width: 900px) {
   .flex-left {
     -webkit-box-pack: left !important;
         -ms-flex-pack: left !important;
@@ -293,7 +294,7 @@ li {
   font-size: 2rem;
 }
 
-@media only screen and (max-width: 660px) {
+@media only screen and (max-width: 900px) {
   li {
     font-size: 1.5rem !important;
   }
@@ -314,7 +315,7 @@ li {
 .navbar {
   background: transparent;
   width: 100%;
-  position: relative;
+  position: fixed;
   z-index: 3;
 }
 
@@ -350,15 +351,13 @@ li {
 .navbar .brand {
   color: whitesmoke;
   font-size: 40px;
-  height: 60px;
+  height: auto;
   width: auto;
   margin: 15px;
 }
 
 .navbar .navbar-collapse {
   position: relative;
-  top: 0px;
-  height: 0px;
   background: white;
 }
 
@@ -368,7 +367,7 @@ li {
   margin-right: 50px;
 }
 
-@media only screen and (max-width: 660px) {
+@media only screen and (max-width: 900px) {
   .navbar .navbar-collapse .nav-item {
     color: #ff0000;
     margin-right: 0px !important;
@@ -377,7 +376,7 @@ li {
   }
 }
 
-@media only screen and (max-width: 660px) {
+@media only screen and (max-width: 900px) {
   .navbar .navbar-collapse {
     opacity: 0;
     padding: 10px 0px;
@@ -394,18 +393,21 @@ li {
             align-items: center;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    -webkit-animation: navbar-in 0.5s ease-in;
-    animation: navbar-in 0.5s ease-in;
   }
 }
 
-@media only screen and (max-width: 660px) {
+@media only screen and (max-width: 900px) {
   .navbar .navbar-show {
-    height: 300px;
     opacity: 1;
     -webkit-animation: navbar-out 0.5s ease-in;
     animation: navbar-out 0.5s ease-out;
   }
+}
+
+.navbar .hide {
+  height: 0px;
+  -webkit-animation: navbar-in 0.5s ease-in;
+  animation: navbar-in 0.5s ease-in;
 }
 
 .navbar-no-brand {
@@ -417,7 +419,7 @@ li {
 }
 
 .navbar-brand {
-  height: 70px;
+  height: auto;
 }
 
 .navbar-brand .nav-item {
@@ -437,10 +439,11 @@ li {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 100%;
-  height: 89vh;
+  height: 87vh;
+  padding-top: 50px;
 }
 
-@media only screen and (max-width: 660px) {
+@media only screen and (max-width: 900px) {
   .about {
     -webkit-box-pack: left !important;
         -ms-flex-pack: left !important;
@@ -448,7 +451,13 @@ li {
   }
 }
 
-@media only screen and (max-width: 660px) {
+@media only screen and (max-width: 900px) {
+  .about {
+    height: auto !important;
+  }
+}
+
+@media only screen and (max-width: 900px) {
   .about .col {
     width: 100% !important;
   }
@@ -494,7 +503,7 @@ li {
   padding: 4px;
 }
 
-@media only screen and (max-width: 660px) {
+@media only screen and (max-width: 900px) {
   .about .col div a .icon {
     width: 30px !important;
     height: 30px !important;
@@ -528,7 +537,7 @@ li {
       align-content: center;
 }
 
-@media only screen and (max-width: 660px) {
+@media only screen and (max-width: 900px) {
   #portfolio .flex {
     -webkit-box-pack: left !important;
         -ms-flex-pack: left !important;
@@ -547,7 +556,7 @@ li {
   padding: 0px;
 }
 
-@media only screen and (max-width: 660px) {
+@media only screen and (max-width: 900px) {
   #portfolio .flex .portfolio-btn {
     font-size: 1rem !important;
   }
@@ -557,7 +566,7 @@ li {
   width: 70% !important;
 }
 
-@media only screen and (max-width: 660px) {
+@media only screen and (max-width: 900px) {
   #portfolio .flex .thumbnail {
     width: 70% !important;
   }
@@ -599,7 +608,7 @@ li {
   font-size: 2rem;
 }
 
-@media only screen and (max-width: 660px) {
+@media only screen and (max-width: 900px) {
   .contacts p {
     font-size: 1.5rem;
   }
@@ -607,5 +616,14 @@ li {
 
 .contacts .mailTo p:hover {
   color: #ff0000 !important;
+}
+
+#footer {
+  background: black;
+  padding: 1px 0px;
+}
+
+#footer p {
+  color: silver;
 }
 /*# sourceMappingURL=style.css.map */

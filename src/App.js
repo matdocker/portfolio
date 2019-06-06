@@ -15,6 +15,9 @@ function App() {
         brand={require("./Images/logo.png")}
         brandFloat={"left"}
       />
+      <footer id="footer" className="text-center">
+        <p>Designed using React-js by Mathew Docker</p>
+      </footer>
     </div>
   );
 }

@@ -13,7 +13,7 @@ class SocialIcons extends Component {
 
   render() {
     return (
-      <div className="">
+      <div>
         <a href={this.props.linkdin} target="_blank">
           <i class="fab fa-linkedin icon" />
         </a>
